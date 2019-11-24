@@ -9,6 +9,8 @@ public class Muerte : MonoBehaviour
 
     public Transform spawn;
 
+    public Movimiento movimiento;
+
     public float constanteDeMuerte;
 
     // Start is called before the first frame update
@@ -16,12 +18,19 @@ public class Muerte : MonoBehaviour
     {
         jugador = GameObject.Find("Jugador");
         spawn = GameObject.Find("Spawn").GetComponent<Transform>();
+        movimiento = GameObject.Find("Jugador").GetComponent<Movimiento>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (jugador.transform.position.y < constanteDeMuerte)
+        {
+            Morir();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.R) && movimiento.devMode == true)
         {
             Morir();
         }

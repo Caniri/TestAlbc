@@ -14,6 +14,9 @@ public class Movimiento : MonoBehaviour
     public float potenciaSalto;
 
 
+    public bool devMode;
+
+
     private void Awake()
     {
         jugador = GameObject.Find("Jugador");
