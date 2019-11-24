@@ -13,6 +13,15 @@ public class Muerte : MonoBehaviour
 
     public float constanteDeMuerte;
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Gris")
+        {
+            Morir();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +33,9 @@ public class Muerte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
         if (jugador.transform.position.y < constanteDeMuerte)
         {
             Morir();
