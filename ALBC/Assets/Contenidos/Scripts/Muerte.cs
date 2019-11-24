@@ -9,7 +9,7 @@ public class Muerte : MonoBehaviour
 
     public Transform spawn;
 
-    public float constanteDeMuerte = 5;
+    public float constanteDeMuerte;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Muerte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (jugador.transform.position.y < -constanteDeMuerte)
+        if (jugador.transform.position.y < constanteDeMuerte)
         {
             Morir();
         }
