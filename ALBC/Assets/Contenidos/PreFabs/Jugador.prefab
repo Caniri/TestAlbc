@@ -130,7 +130,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3062814207336717403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   rb2d: {fileID: 0}
-  velocidadMaxima: 0
+  velocidadMaxima: 5
+  velocidad: 10
   movimientoH: 0
-  potenciaSalto: 0
+  potenciaSalto: 400
