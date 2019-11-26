@@ -19,6 +19,8 @@ public class Movimiento : MonoBehaviour
 
     public bool isGrounded;
     public float potenciaSalto;
+    public float longitudRayo;
+    
 
 
     [Header("Developers")]
@@ -54,6 +56,17 @@ public class Movimiento : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, potenciaSalto));
         }
 
+
+        RaycastHit ground;
+        Ray posicionRayo = new Ray(transform.position, Vector3.down);
+
+        if (Physics.Raycast(posicionRayo, out ground, longitudRayo))
+        {
+            if(ground.collider.tag == "")
+            {
+                isGrounded = true;
+            }
+        }
 
         // VELOCIDAD EN CONSOLA - COMPROBAR LOS LÍMITES
         Debug.Log(rb2d.velocity.x);
