@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e3e7ad2a01ddd4a958c1970bf371baa5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -150,7 +150,13 @@ MonoBehaviour:
   velocidadMaxima: 5
   velocidad: 10
   movimientoH: 0
+  multiplicadorDeCaida: 1.25
+  multiplicadorSaltoBajo: 0
+  isGrounded: 0
   potenciaSalto: 400
+  longitudRayoInferior: 0
+  offsetDown: -0.55
+  devMode: 1
 --- !u!114 &120484957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   spawn: {fileID: 0}
+  movimiento: {fileID: 0}
   constanteDeMuerte: 5
 --- !u!1001 &8413956467478126942
 PrefabInstance:
@@ -173,11 +180,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5243291209839495380}
     m_Modifications:
-    - target: {fileID: 2235537684910963418, guid: d41ea0ea0f99f44a28d4b2fceb51bbe2,
-        type: 3}
-      propertyPath: m_Name
-      value: Camara
-      objectReference: {fileID: 0}
     - target: {fileID: 2235537684910963238, guid: d41ea0ea0f99f44a28d4b2fceb51bbe2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235537684910963418, guid: d41ea0ea0f99f44a28d4b2fceb51bbe2,
+        type: 3}
+      propertyPath: m_Name
+      value: Camara
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41ea0ea0f99f44a28d4b2fceb51bbe2, type: 3}
