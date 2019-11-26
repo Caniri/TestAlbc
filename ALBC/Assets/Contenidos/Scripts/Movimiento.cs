@@ -19,7 +19,8 @@ public class Movimiento : MonoBehaviour
 
     public bool isGrounded;
     public float potenciaSalto;
-    public float longitudRayo;
+    public float longitudRayoInferior;
+    public float offsetDown;
     
 
 
@@ -51,25 +52,34 @@ public class Movimiento : MonoBehaviour
 
         // SALTO
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded == true)
         {
             rb2d.AddForce(new Vector2(0f, potenciaSalto));
         }
 
 
-        RaycastHit ground;
-        Ray posicionRayo = new Ray(transform.position, Vector3.down);
-
-        if (Physics.Raycast(posicionRayo, out ground, longitudRayo))
-        {
-            if(ground.collider.tag == "")
-            {
-                isGrounded = true;
-            }
-        }
+        
 
         // VELOCIDAD EN CONSOLA - COMPROBAR LOS LÍMITES
         Debug.Log(rb2d.velocity.x);
+
+
+
+        RaycastHit2D rayoAbajo = Physics2D.Raycast(new Vector2 (jugador.transform.position.x, jugador.transform.position.y + offsetDown), new Vector2(0, -1), longitudRayoInferior);
+
+        if (rayoAbajo.collider.tag == null)
+        {
+            isGrounded = false;
+        }
+
+        else if (rayoAbajo.collider.tag == "Terreno")
+        {
+            isGrounded = true;
+        }
+
+        
+
+        
     }
 
     private void FixedUpdate()
@@ -84,6 +94,8 @@ public class Movimiento : MonoBehaviour
         rb2d.velocity = new Vector2(Mathf.Clamp(rb2d.velocity.x, -velocidadMaxima, velocidadMaxima), rb2d.velocity.y);
 
 
+
+        
 
     }
 
