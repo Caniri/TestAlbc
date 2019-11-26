@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
+    [Header("Llamados")]
 
     public GameObject jugador;
     public Rigidbody2D rb2d;
 
+    [Header("Movimiento")]
+
     public float velocidadMaxima;
     public float velocidad;
     public float movimientoH;
+
+    [Header("Salto")]
+
+    public bool isGrounded;
     public float potenciaSalto;
 
+
+    [Header("Developers")]
 
     public bool devMode;
 
 
     private void Awake()
     {
+
+        // AQUÍ BUSCAMOS LOS ELEMENTOS EN LA JERARQUÍA.
+
         jugador = GameObject.Find("Jugador");
 
         rb2d = jugador.gameObject.GetComponent<Rigidbody2D>();
@@ -34,11 +46,16 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // SALTO
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             rb2d.AddForce(new Vector2(0f, potenciaSalto));
         }
 
+
+        // VELOCIDAD EN CONSOLA - COMPROBAR LOS LÍMITES
         Debug.Log(rb2d.velocity.x);
     }
 
