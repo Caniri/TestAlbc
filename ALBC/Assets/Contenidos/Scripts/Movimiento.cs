@@ -18,12 +18,11 @@ public class Movimiento : MonoBehaviour
     [Header("Salto")]
 
     public float multiplicadorDeCaida;
-    public float multiplicadorSaltoBajo;
 
     public bool isGrounded;
     public float potenciaSalto;
     public float longitudRayoInferior;
-    public float offsetDown;
+    private float offsetDown = -0.6f;
     
     
 
@@ -61,7 +60,7 @@ public class Movimiento : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, potenciaSalto));
         }
 
-
+        // T != T (CAE MÁS RÁPIDO DE LO QUE SUBE)
 
         if (rb2d.velocity.y < 0)
         {
@@ -92,11 +91,18 @@ public class Movimiento : MonoBehaviour
     private void FixedUpdate()
     {
 
+
+        // MOVIMIENTO DEL JUGADOR
+
+
         movimientoH = Input.GetAxisRaw("Horizontal");
 
         Vector2 movilidad = new Vector2(movimientoH * velocidad, 0f);
 
         rb2d.AddForce(movilidad);
+
+
+        // LIMITAR LA VELOCIDAD DEL JUGADOR
 
         rb2d.velocity = new Vector2(Mathf.Clamp(rb2d.velocity.x, -velocidadMaxima, velocidadMaxima), rb2d.velocity.y);
 
