@@ -152,10 +152,11 @@ MonoBehaviour:
   velocidad: 10
   movimientoH: 0
   multiplicadorDeCaida: 1.25
+  fuerzaBaja: 1000
   isGrounded: 0
   potenciaSalto: 400
   longitudRayoInferior: 0
-  devMode: 1
+  devMode: 0
 --- !u!114 &7127518521120334072
 MonoBehaviour:
   m_ObjectHideFlags: 0

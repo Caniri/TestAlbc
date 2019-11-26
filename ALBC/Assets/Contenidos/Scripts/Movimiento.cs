@@ -19,6 +19,8 @@ public class Movimiento : MonoBehaviour
 
     public float multiplicadorDeCaida;
 
+    public float fuerzaBaja;
+
     public bool isGrounded;
     public float potenciaSalto;
     public float longitudRayoInferior;
@@ -59,6 +61,16 @@ public class Movimiento : MonoBehaviour
         {
             rb2d.AddForce(new Vector2(0f, potenciaSalto));
         }
+
+
+        // FUEZA HACIA ABAJO
+
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            rb2d.AddForce(new Vector2 (0f, -fuerzaBaja));
+        }
+
 
         // T != T (CAE MÁS RÁPIDO DE LO QUE SUBE)
 
