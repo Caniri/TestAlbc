@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 6f85920e132454398a600e8d8c1c2db2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Austral Slab
+  fontNames:
+  - Austral Slab
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: cecec8918a877466897ffb7492fc10ef, type: 3}
+  - {fileID: 12800000, guid: 746538453642c4c52b7f97518f3a1126, type: 3}
+  - {fileID: 12800000, guid: 1fd4d377389da4826aebce1c61333f16, type: 3}
+  - {fileID: 12800000, guid: a240e097ec2cf40df8223e39a924f794, type: 3}
+  - {fileID: 12800000, guid: 1fba1cf7dfda245568358965d814cece, type: 3}
+  - {fileID: 12800000, guid: 1551ed89485a14fcca5da8d7cd7047d0, type: 3}
+  - {fileID: 12800000, guid: 8b764aa9cde194807a44186900b9c19a, type: 3}
+  - {fileID: 12800000, guid: 2387e6aa1281045ddb940fedc4ba2249, type: 3}
+  - {fileID: 12800000, guid: a53e0acbaf6d246edad17e47a0be598f, type: 3}
+  - {fileID: 12800000, guid: aadd775e11c754ba8a4acd7d2b31e800, type: 3}
+  - {fileID: 12800000, guid: 6987e8aed159e4640ba324a872ab2864, type: 3}
+  - {fileID: 12800000, guid: 5bb3c41fac4c84aed80aa9ed23acf1ea, type: 3}
+  - {fileID: 12800000, guid: 5f4bf05fa140b4e6d925e958f650c4ef, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 2387e6aa1281045ddb940fedc4ba2249
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Austral Slab
+  fontNames:
+  - Austral Slab
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a240e097ec2cf40df8223e39a924f794, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
